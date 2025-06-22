@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Database Notes</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+      }
+      .section {
+        background: #fff;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      .section-header {
+        line-height: 1.6;
+        padding: 20px;
+        color: black;
+        background: #ceddbb;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px 5px 0 0;
+      }
+      .section-content {
+        display: none;
+        padding: 15px;
+      }
+      .footer {
+        color: white;
+        background-color: #181818;
+        text-align: center;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h1>Unit-1 : Database</h1></center>
+
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        1. Data and Information
+      </div>
+      <div class="section-content">
+        <p>
+          <strong>Data:</strong> Data are raw facts and figures which are
+          unorganized and don’t provide meaningful information unless processed.
+          Example: Ram, 17, Pokhara, 18
+        </p>
+        <p>
+          <strong>Information:</strong> Processed data which conveys meaningful
+          results. Example: Ram is 17 years old and lives in Pokhara 18.
+        </p>
+        <p>
+          Problems with unorganized data include redundancy, slow retrieval, and
+          poor security. To solve these, databases are used.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        2. Database & Flat File System
+      </div>
+      <div class="section-content">
+        <p>
+          A <strong>Database</strong> is a structured collection of related
+          data. It allows easy access, management, and updating of data.
+          Examples: dictionary, phonebook, marks ledger.
+        </p>
+        <p>Flat File System limitations include:</p>
+        <ul>
+          <li>Redundant data</li>
+          <li>Slow processing</li>
+          <li>Low security</li>
+          <li>Difficult sharing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">3. DBMS</div>
+      <div class="section-content">
+        <p>
+          <strong>DBMS</strong> is a software for managing databases. It allows
+          storage, retrieval, and updating of data. Examples: MS Access, Oracle,
+          MySQL.
+        </p>
+        <p><strong>Advantages:</strong></p>
+        <ul>
+          <li>Data sharing</li>
+          <li>Less redundancy</li>
+          <li>Security</li>
+          <li>Data backup</li>
+        </ul>
+        <p>
+          <strong>Disadvantages:</strong> Expensive, needs training, requires
+          backups.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        4. Database Models
+      </div>
+      <div class="section-content">
+        <p>
+          <strong>Hierarchical Model:</strong> Tree structure, parent-child
+          relationship.
+        </p>
+        <p>
+          <strong>Network Model:</strong> Graph structure, supports many-to-many
+          relationships.
+        </p>
+        <p>
+          <strong>Relational Model:</strong> Tables with rows and columns
+          (RDBMS).
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        5. Centralized vs Distributed Database
+      </div>
+      <div class="section-content">
+        <p>
+          <strong>Centralized:</strong> All data stored in one location. Easy to
+          maintain but prone to failure.
+        </p>
+        <p>
+          <strong>Distributed:</strong> Data stored in multiple locations. More
+          secure and faster but costly.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        6. SQL (Structured Query Language)
+      </div>
+      <div class="section-content">
+        <p>
+          <strong>SQL</strong> is used to interact with relational databases.
+          Developed by IBM in the 1970s.
+        </p>
+        <ul>
+          <li>
+            <strong>DDL:</strong> Create/structure tables. e.g. CREATE TABLE
+          </li>
+          <li><strong>DML:</strong> Manipulate data. e.g. INSERT, DELETE</li>
+          <li><strong>DCL:</strong> Control access. e.g. GRANT</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        7. ER Model
+      </div>
+      <div class="section-content">
+        <p><strong>Entity:</strong> Real-world object (rectangle)</p>
+        <p><strong>Attribute:</strong> Property of entity (ellipse)</p>
+        <p>
+          <strong>Relationship:</strong> Association between entities (diamond)
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        8. DBA (Database Administrator)
+      </div>
+      <div class="section-content">
+        <p>
+          A person with full control over DBMS. Responsibilities include
+          security, updates, backups, training, and access control.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        9. Normalization
+      </div>
+      <div class="section-content">
+        <p>
+          Breaking complex tables into smaller ones to reduce redundancy.
+          Involves:
+        </p>
+        <ul>
+          <li><strong>1NF:</strong> Eliminate duplicate columns</li>
+          <li><strong>2NF:</strong> Remove partial dependencies</li>
+          <li><strong>3NF:</strong> Remove non-key dependencies</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function toggleSection(header) {
+        const content = header.nextElementSibling;
+        content.style.display =
+          content.style.display === "block" ? "none" : "block";
+      }
+    </script>
+    <footer class="footer">
+      &copy; 2025 Aabhushan Khanal All Rights Reserved
+    </footer>
+  </body>
+</html>
